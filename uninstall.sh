@@ -8,14 +8,8 @@ fi
 
 if [ "$(id -u)" != "0" ]
 then
-   echo "This script must be run as root (use sudo ./install.sh)." 1>&2
+   echo "This script must be run as root (use sudo ./uninstall.sh)." 1>&2
    exit 1
-fi
-
-GENMON_INSTALLED=$(dpkg --get-selections | grep "^xfce4-genmon-plugin[[:space:]]*install$")
-if [[ -z GENMON_INSTALLED ]]
-then
-   apt install xfce4-genmon-plugin
 fi
 
 # Disable updater service
