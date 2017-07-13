@@ -1,0 +1,5 @@
+[Unit]
+Description=Get C.H.I.P. battery status
+
+[Service]
+ExecStart=/usr/local/sbin/chip-battery-update-status

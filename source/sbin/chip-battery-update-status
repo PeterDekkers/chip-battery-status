@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# Force ADC enable for battery voltage and current
+i2cset -y -f 0 0x34 0x82 0xC3
+
+# Read fuel gauge B9h
+BAT_GAUGE_HEX=$(i2cget -y -f 0 0x34 0xb9)
+# Bash math -- converts hex to decimal so `bc` won't complain later...
+# MSB is 8 bits, LSB is lower 4 bits
+BAT_GAUGE_DEC=$(($BAT_GAUGE_HEX))
+
+# Read Power OPERATING MODE register @01h
+POWER_OP_MODE=$(i2cget -y -f 0 0x34 0x01)
+# Charging indication (1 or 0)
+CHARG_IND=$(($(($POWER_OP_MODE&0x40))/64))  # divide by 64 is like shifting right 6 times
+
+# Output to publicly-accesible files
+echo "$CHARG_IND" > /usr/local/lib/chip-battery-status/charging
+echo "$BAT_GAUGE_DEC" > /usr/local/lib/chip-battery-status/percentage

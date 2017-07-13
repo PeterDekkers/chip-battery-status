@@ -1,0 +1,13 @@
+#!/bin/bash
+
+PERCENTAGE=$(</usr/local/lib/chip-battery-status/percentage)
+CHARGING=$(</usr/local/lib/chip-battery-status/charging)
+
+if [[ "$CHARGING" -eq "1" ]] || [[ "$PERCENTAGE" -eq "100" ]]
+then
+    # Show white text when charging or 100%
+    echo "<txt><span fgcolor='#FFFFFF'>""$PERCENTAGE""%</span></txt>"
+else
+    # Show grey text when not charging
+    echo "<txt><span fgcolor='#AFAFAF'>""$PERCENTAGE""%</span></txt>"
+fi

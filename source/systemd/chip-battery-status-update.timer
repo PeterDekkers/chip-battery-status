@@ -1,0 +1,10 @@
+[Unit]
+Description=Runs battery status update script periodically.
+
+[Timer]
+OnBootSec=3s
+OnUnitActiveSec=3s
+Unit=chip-battery-status-update.service
+
+[Install]
+WantedBy=timers.target
