@@ -37,8 +37,19 @@ for the `Period (s)` enter `5`. Hit `Close`
 
 5. Enjoy. 🍹 🌴
 
+## How to uninstall
+```
+sudo ./uninstall.sh
+```
+This script will disable the battery status polling service
+and remove all previously-installed scripts and files.
+
+It will not remove the desktop panel item. To remove that 
+simply right-click (_or Ctrl-click_) the item and select 
+`Remove`.
+
 ## Customisation
-If you're keen you can change the way the battery status is
+You can change the way the battery status is
 displayed by editing `/usr/local/bin/chip-battery-xfce-genmon`.
 
 Follow the instructions on the [xfce4-genmon-plugin](http://goodies.xfce.org/projects/panel-plugins/xfce4-genmon-plugin)
