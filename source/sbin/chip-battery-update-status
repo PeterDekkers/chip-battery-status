@@ -14,6 +14,6 @@ POWER_OP_MODE=$(i2cget -y -f 0 0x34 0x01)
 # Charging indication (1 or 0)
 CHARG_IND=$(($(($POWER_OP_MODE&0x40))/64))  # divide by 64 is like shifting right 6 times
 
-# Output to publicly-accesible files
+# Output to publicly-accessible files
 echo "$CHARG_IND" > /usr/local/lib/chip-battery-status/charging
 echo "$BAT_GAUGE_DEC" > /usr/local/lib/chip-battery-status/percentage
