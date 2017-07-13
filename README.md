@@ -1,7 +1,7 @@
 # C.H.I.P. battery status for xfce4 desktop
 
 A simple script to display battery percentage 
-on the xfce4 desktop on NextThing.co's C.H.I.P.
+on the xfce4 desktop of NextThing.co's C.H.I.P.
 
 Works nicely with PocketC.H.I.P.
 
