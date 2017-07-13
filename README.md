@@ -30,6 +30,6 @@ e.g your clock. Choose `Panel > Add New Items...`
 4. In the `Command` field enter `chip-battery-xfce-genmon` and
 for the `Period (s)` enter `5`. Hit `Close`
 
-![xfce panel item setup #3](assets/chip-battery-genmon-setup-3.png)
+![xfce panel item setup #4](assets/chip-battery-genmon-setup-4.png)
 
 5. Enjoy. 🍹 🌴
