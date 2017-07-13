@@ -1,17 +1,20 @@
-# chip-battery-status
+# C.H.I.P. battery status for xfce4 desktop
 
-A simple script to provide battery status for 
-NextThing.co's C.H.I.P. inside the xfce4 desktop.
+A simple script to display battery percentage 
+on the xfce4 desktop on NextThing.co's C.H.I.P.
+
+Works nicely with PocketC.H.I.P.
 
 ![chip-battery-status xfce genmon preview](assets/chip-battery-genmon-preview.png)
 
-## Installation
+## How to install
+Download/clone the files to your C.H.I.P.
 ```
+cd chip-battery-status
 sudo ./install.sh
 ```
 
-Once that's complete you need to add a panel item 
-to your xfce4 desktop.
+Now you need to add a panel item to your xfce4 desktop.
 
 1. Right-click (_or Ctrl-click_) on an existing panel item,
 e.g your clock. Choose `Panel > Add New Items...`
@@ -33,3 +36,10 @@ for the `Period (s)` enter `5`. Hit `Close`
 ![xfce panel item setup #4](assets/chip-battery-genmon-setup-4.png)
 
 5. Enjoy. 🍹 🌴
+
+## Customisation
+If you're keen you can change the way the battery status is
+displayed by editing `/usr/local/bin/chip-battery-xfce-genmon`.
+
+Follow the instructions on the [xfce4-genmon-plugin](http://goodies.xfce.org/projects/panel-plugins/xfce4-genmon-plugin)
+page to change colours, add images, etc.
