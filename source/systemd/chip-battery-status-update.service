@@ -2,4 +2,5 @@
 Description=Get C.H.I.P. battery status
 
 [Service]
+Nice=-15
 ExecStart=/usr/local/sbin/chip-battery-update-status
