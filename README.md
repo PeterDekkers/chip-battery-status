@@ -1,14 +1,14 @@
-# C.H.I.P. battery status for xfce4 desktop
+# CHIP battery status for xfce4 desktop
 
 A simple script to display battery percentage 
-on the xfce4 desktop of NextThing.co's C.H.I.P.
+on the xfce4 desktop of NextThing.co's CHIP
 
-Works nicely with PocketC.H.I.P.
+Works nicely with PocketCHIP.
 
 ![chip-battery-status xfce genmon preview](assets/chip-battery-genmon-preview.png)
 
 ## How to install
-Download/clone the files to your C.H.I.P.
+Download/clone the files to your CHIP.
 ```
 cd chip-battery-status
 sudo ./install.sh
